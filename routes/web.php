@@ -5,6 +5,7 @@ use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Reservation;
 use App\Models\Testimonials;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,9 +60,10 @@ Route::middleware([
 
 // Admin routes
 Route::group(['middleware' => ['auth', 'admin']], function () {
-    Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
+    /* Route::get('/admin', 'AdminController@index')->name('admin.dashboard'); */
     // Add other admin routes here
-    Route::post('/Offers',[ReservationController::class,'store'])->name('reserve');
+    Route::get('/admin',[AdminController::class, 'showdashboard'])->name('admin.dashboard');
+    Route::get('/Offers',[ReservationController::class,'store'])->name('reserve');
     Route::get('/Testimonys',[TestimonialsController::class,'index'])->name('testimonys');
     Route::get('/Testimonials',[TestimonialsController::class,'index2'])->name('testimonials');
     Route::post('/Testimonials',[TestimonialsController::class,'store'])->name('testimony');

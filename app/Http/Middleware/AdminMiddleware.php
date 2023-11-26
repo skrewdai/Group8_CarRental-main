@@ -19,7 +19,7 @@ class AdminMiddleware
             return $next($request);
         }
     
-        return redirect('/home'); // Redirect non-admin users
+        return redirect('/'); // Redirect non-admin users
     }
     
 }
