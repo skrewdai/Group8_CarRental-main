@@ -19,8 +19,13 @@ class Reservation extends Model
         "fname",
         "email",
         "phone",
+        'status',
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
 
 }

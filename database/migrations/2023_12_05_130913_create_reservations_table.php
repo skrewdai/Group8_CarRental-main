@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('fname');
             $table->string('email')->unique();
             $table->integer('phone');
+            $table->string('status')->default('pending'); // or another type that fits your requirements
+            $table->unsignedBigInteger('user_id')->nullable(); // or ->default(1); // Provide a default user_id
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
 

@@ -5,19 +5,64 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                 {{--    <a href="{{ route('dashboard') }}">
                         <x-application-mark class="block h-9 w-auto" />
-                    </a>
+                    </a> --}}
+                    @auth
+                @if(auth()->user()->role === 'admin')
+                    <a href="{{ route('admin.dashboard') }}"><x-application-mark class="block h-9 w-auto" /></a>
+                @elseif(auth()->user()->role === 'user')
+                    <a href="{{ route('user.dashboard') }}"><x-application-mark class="block h-9 w-auto" /></a>
+                @endif
+            @endauth
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+{{--                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link href="{{route('testimonys')}}" :active="request()->routeIs('dashboard')">
                         Testimonials
                     </x-nav-link>
+                    <x-nav-link href="{{route('admin.dashboard')}}" :active="request()->routeIs('dashboard')">
+                        Dash
+                    </x-nav-link>
+                </div> --}}
+                @php
+                $user = auth()->user();
+                @endphp
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    
+                    @auth
+                    @if(auth()->user()->role === 'admin')
+                    <x-nav-link href="{{route('testimonys')}}" :active="request()->routeIs('dashboard')">
+                        Testimonials
+                    </x-nav-link>
+                    <x-nav-link href="{{route('admin.Reserve')}}">
+                        Reservation
+                    </x-nav-link>
+                    <x-nav-link href="{{route('admin.dashboard')}}" :active="request()->routeIs('dashboard')">
+                        Dashboard
+                    </x-nav-link>
+                   
+                    @elseif(auth()->user()->role === 'user')
+                    <x-nav-link href="{{ route('user.dashboard') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                       </x-nav-link>
+                       <x-nav-link href="{{ route('user.approvedReservations') }}">
+                        Approved
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('user.declinedReservations') }}">
+                        Declined
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('user.reservations') }}">
+                        Reserved
+                    </x-nav-link>
+                    
+                    @endif
+                @endauth
                 </div>
             </div>
 

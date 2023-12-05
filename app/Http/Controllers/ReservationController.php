@@ -25,4 +25,41 @@ class ReservationController extends Controller
         return redirect()->route('Offers')->with('success','');
 
     }
+
+    public function index(){
+        $reservations = Reservation::all();
+        return view('admin.Reserve',compact('reservations'));
+    }
+
+ // ReservationController.php
+
+// ...
+
+public function approve($id)
+{
+    $reservation = Reservation::findOrFail($id);
+    
+    // Check if the reservation is not already approved
+    if ($reservation->status !== 'approved') {
+        $reservation->status = 'approved';
+        $reservation->save();
+        return redirect()->route('admin.Reserve')->with('success', 'Reservation approved successfully.');
+    } else {
+        return redirect()->route('admin.Reserve')->with('error', 'Reservation is already approved.');
+    }
+}
+
+
+public function decline($id)
+{
+    // Logic to decline reservation with ID $id
+    return redirect()->route('admin.Reserve')->with('success', 'Reservation declined successfully.');
+}
+
+public function approvedReservations()
+{
+    $user = Auth::user();
+    $approvedReservations = $user->reservations()->where('status', 'approved')->get();
+    return view('user.approved_reservations', compact('approvedReservations'));
+}
 }

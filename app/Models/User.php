@@ -9,6 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
+
 
 class User extends Authenticatable
 {
@@ -17,6 +19,8 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use HasRoles;
+
 
     /**
      * The attributes that are mass assignable.
@@ -64,4 +68,9 @@ class User extends Authenticatable
 {
     return $this->role === 'admin'; // Assuming you have a 'role' column in your users table
 }
+public function reservations()
+{
+    return $this->hasMany(Reservation::class);
+}
+
 }

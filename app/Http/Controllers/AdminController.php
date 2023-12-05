@@ -20,22 +20,7 @@ class AdminController extends Controller
     {
         $isAdmin = Auth::check() && Auth::user()->role === 'admin';
     
-        return view('dashboard', ['isAdmin' => $isAdmin]);
+        return view('/admin/dash', ['isAdmin' => $isAdmin]);
     }
-    public function store(Request $request)
-    {
-        $reservation = new Reservation();
-        $reservation->pickup = $request->input('pickup');
-        $reservation->return = $request->input('return');
-        $reservation->pickdate = $request->input('datetime');
-        $reservation->retdate = $request->input('datetime1');
-        $reservation->fname = $request->input('fname');
-        $reservation->email = $request->input('email');
-        $reservation->phone = $request->input('phone');
-        
-        $reservation->save();
-
-        return view('admin', compact('reservations'));
-
-    }
+  
 }
