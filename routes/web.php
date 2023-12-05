@@ -22,6 +22,9 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 Route::get('/Faqs', function () {
     return view('Faqs');
 });

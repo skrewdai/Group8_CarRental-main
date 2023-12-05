@@ -37,29 +37,29 @@
                     
                     @auth
                     @if(auth()->user()->role === 'admin')
-                    <x-nav-link href="{{route('testimonys')}}" :active="request()->routeIs('dashboard')">
-                        Testimonials
-                    </x-nav-link>
                     <x-nav-link href="{{route('admin.Reserve')}}">
                         Reservation
                     </x-nav-link>
-                    <x-nav-link href="{{route('admin.dashboard')}}" :active="request()->routeIs('dashboard')">
-                        Dashboard
+                    <x-nav-link href="{{route('testimonys')}}" :active="request()->routeIs('dashboard')">
+                        Testimonials
                     </x-nav-link>
+                    <!-- <x-nav-link href="{{route('admin.dashboard')}}" :active="request()->routeIs('dashboard')">
+                        Dashboard
+                    </x-nav-link> -->
                    
                     @elseif(auth()->user()->role === 'user')
                     <x-nav-link href="{{ route('user.dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                        </x-nav-link>
-                       <x-nav-link href="{{ route('user.approvedReservations') }}">
+                       <!-- <x-nav-link href="{{ route('user.approvedReservations') }}">
                         Approved
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('user.declinedReservations') }}">
+                    </x-nav-link> -->
+                    <!-- <x-nav-link href="{{ route('user.declinedReservations') }}">
                         Declined
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('user.reservations') }}">
+                    </x-nav-link> -->
+                    <!-- <x-nav-link href="{{ route('user.reservations') }}">
                         Reserved
-                    </x-nav-link>
+                    </x-nav-link> -->
                     
                     @endif
                 @endauth
