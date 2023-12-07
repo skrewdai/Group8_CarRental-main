@@ -57,9 +57,9 @@
                     <!-- <x-nav-link href="{{ route('user.declinedReservations') }}">
                         Declined
                     </x-nav-link> -->
-                    <!-- <x-nav-link href="{{ route('user.reservations') }}">
+                    <x-nav-link href="{{ route('user.reservations') }}">
                         Reserved
-                    </x-nav-link> -->
+                    </x-nav-link> 
                     
                     @endif
                 @endauth

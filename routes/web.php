@@ -76,8 +76,9 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 });
 // User routes
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/user', [UserController::class,'index'])->name('user.dashboard');
-    
+  /*   Route::get('/user', [UserController::class,'index'])->name('user.dashboard'); */
+    //
+    Route::get('/Reserve',[ReservationController::class,'userreserve'])->name('user.dashboard');
     // Add other user routes here
     Route::get('/Testimonials',[TestimonialsController::class,'index2'])->name('testimonials');
     Route::post('/Testimonials',[TestimonialsController::class,'store'])->name('testimony');

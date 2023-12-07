@@ -38,4 +38,11 @@ public function declinedReservations()
     $declinedReservations = $user->reservations()->where('status', 'declined')->get();
     return view('user.declined_reservations', compact('declinedReservations'));
 }
+
+//
+
+public function index2(){
+    $reservations = Reservation::all();
+    return view('user.Reserve',compact('reservations'));
+}
 }

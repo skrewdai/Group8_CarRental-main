@@ -22,7 +22,24 @@
                 <th scope="col">Status</th>
               </tr>
             </thead>
+            <tbody>
+              @foreach($reservations as $reserve)
+                  <tr>
+                      <th scope="row">{{$reserve->id}}</th>
+                      <td>{{$reserve->pickup}} </td>
+                      <td>{{$reserve->return}} </td>
+                      <td>{{$reserve->pickdate}} </td>
+                      <td>{{$reserve->retdate}} </td>
+                      <td>{{$reserve->fname}} </td>
+                      <td>{{$reserve->email}} </td>
+                      <td>{{$reserve->phone}} </td>
+                      <td>{{$reserve->status}} </td>
+
+                  </tr>
+              @endforeach 
+          </tbody>
           </table>
+
       </div>
 </div>
 </x-app-layout>

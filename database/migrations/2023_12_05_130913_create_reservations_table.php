@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('pickdate');
             $table->string('retdate');
             $table->string('fname');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->integer('phone');
             $table->string('status')->default('pending'); // or another type that fits your requirements
             $table->unsignedBigInteger('user_id')->nullable(); // or ->default(1); // Provide a default user_id
