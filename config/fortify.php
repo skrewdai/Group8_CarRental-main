@@ -157,4 +157,25 @@ return [
         ]),
     ],
 
+    'passwords' => 'users',
+'username' => 'email',
+'email' => 'auth.emails.password',
+'table' => 'password_resets',
+'expire' => 60,
+'throttle' => 60,
+'reset' => [
+    'expire' => 60,
+],
+'forgot-password' => [
+    'status' => 'livewire.forgot-password-form',
+    'email' => 'auth.passwords.email',
+],
+'features' => [
+    Features::registration(),
+    Features::resetPasswords(),
+    // other features...
+],
+
+
+
 ];

@@ -66,33 +66,42 @@
 										</div>
 
 										<div class="col-6">
-											<h4><i class="fa fa-question-circle"></i> What if I return the car late?</h4>
-											<p> Late returns may incur additional charges. If you anticipate being late, please contact us as soon as possible to discuss options and avoid any penalties.</p>
+											<h4><i class="fa fa-question-circle"></i> What do I need to use CtrlDrive Auto Escapes' service?</h4>
+											<p>To access our services, please log in using your email and password. If you don't have an account, click the blue Register button to complete the registration process. After registration, return to the Login page and enter your credentials.</p>
 										</div>
+										
+										
 									</div>
 
 									<br>
 
 									<div class="row">
+										<div class="col-6">
+											<h4><i class="fa fa-question-circle"></i> What if I return the car late?</h4>
+											<p> Late returns may incur additional charges. If you anticipate being late, please contact us as soon as possible to discuss options and avoid any penalties.</p>
+										</div>
 										<div class="col-6">
 											<h4><i class="fa fa-question-circle"></i> Are there any mileage restrictions?</h4>
 											<p>Most of our rentals come with unlimited mileage, allowing you to enjoy your journey without worrying about mileage restrictions. However, some special rates or promotions might have mileage limits, so it's best to confirm when booking.</p>
 										</div>
 
-										<div class="col-6">
-											<h4><i class="fa fa-question-circle"></i> Can I add an additional driver to the rental?</h4>
-											<p>Yes, you can usually add an additional driver for a fee. Both the primary renter and the additional driver must meet our age and driver's license requirements.</p>
-										</div>
+										
 									</div>
 
 									<br>
 
 									<div class="row">
+									<div class="col-6">
+											<h4><i class="fa fa-question-circle"></i> Can I add an additional driver to the rental?</h4>
+											<p>Yes, you can usually add an additional driver for a fee. Both the primary renter and the additional driver must meet our age and driver's license requirements.</p>
+										</div>
 										<div class="col-6">
 											<h4><i class="fa fa-question-circle"></i> What happens if the car breaks down?</h4>
 											<p>In case of a breakdown, contact our roadside assistance number provided in your rental agreement. We'll arrange for help to get you back on the road as quickly as possible.</p>
 										</div>
 										<br>
+
+										
 
 										<div class="col-6">
 											<h4><i class="fa fa-question-circle"></i> Can I modify my reservation?</h4>

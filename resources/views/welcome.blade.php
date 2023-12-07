@@ -26,18 +26,19 @@
 						<header id="header" class="alt">
 							<a href="welcome" class="logo"><strong> CtrlDrive Auto Escapes</strong> <span>Website</span></a>
 							<nav>
-								<a href="#menu">Menu</a>
-								@if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+							<div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
                         <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-                    @if (Route::has('register'))
+                    <!-- @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                	@endif 
+                	@endif  -->
                     @endauth
                 </div>
+								<a href="#menu">Menu</a>
+								@if (Route::has('login'))
+                
             @endif
 							</nav>
 						</header>
@@ -45,14 +46,8 @@
 						<!-- Menu -->
 						<nav id="menu">
 							<ul class="links">
-								<li class="active"> <a href="welcome">Dashboard </a> </li>
-		
 								<li> <a href="Offers">Offers</a> </li>
-		
 								<li> <a href="AboutUs">About Us</a> </li>
-		
-							   
-		
 								<li><a href="ContactUs">Contact Us</a></li>
 		
 								<li class="dropdown">

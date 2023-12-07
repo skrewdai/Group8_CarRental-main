@@ -18,6 +18,7 @@ use App\Http\Controllers\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// routes/web.php
 
 Route::get('/', function () {
     return view('welcome');
@@ -55,12 +56,18 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        
-        return view('dashboard');
+        // Check if the authenticated user is an admin
+        if (auth()->user()->isAdmin()) {
+            return redirect()->route('admin.Reserve');
+        } else {
+            return redirect()->route('user.dashboard');
+        }
     })->name('dashboard');
     
 });
 /* Route::get('/home', 'HomeController@index')->name('home'); */
+// routes/web.php
+
 
 // Admin routes
 Route::group(['middleware' => ['auth', 'admin']], function () {

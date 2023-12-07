@@ -49,7 +49,7 @@
                    
                     @elseif(auth()->user()->role === 'user')
                     <x-nav-link href="{{ route('user.dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Reservations') }}
                        </x-nav-link>
                        <!-- <x-nav-link href="{{ route('user.approvedReservations') }}">
                         Approved
@@ -58,7 +58,7 @@
                         Declined
                     </x-nav-link> -->
                     <x-nav-link href="{{ route('user.reservations') }}">
-                        Reserved
+                        Book
                     </x-nav-link> 
                     
                     @endif
