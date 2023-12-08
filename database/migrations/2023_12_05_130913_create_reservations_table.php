@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('retdate');
             $table->string('fname');
             $table->string('email');
-            $table->integer('phone');
+            $table->bigInteger('phone');
+            $table->string('car'); // Add the 'car' column
             $table->string('status')->default('pending'); // or another type that fits your requirements
             $table->unsignedBigInteger('user_id')->nullable(); // or ->default(1); // Provide a default user_id
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

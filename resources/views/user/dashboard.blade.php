@@ -22,6 +22,7 @@
                                 <th scope="col">Full Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Phone</th>
+                                <th scope="col">Car</th>
                                 <th scope="col">Status</th>
                             </tr>
                         </thead>
@@ -36,6 +37,7 @@
                                     <td>{{$reserve->fname}} </td>
                                     <td>{{$reserve->email}} </td>
                                     <td>{{$reserve->phone}} </td>
+                                    <td>{{$reserve->car}} </td>
                                     <td>{{$reserve->status}} </td>
                                 </tr>
                             @endforeach 

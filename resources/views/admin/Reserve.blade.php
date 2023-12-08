@@ -25,6 +25,7 @@
                                     <th scope="col">Email</th>
                                     <th scope="col">Phone</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col">Car</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -39,6 +40,7 @@
                                         <td>{{$reserve->fname}} </td>
                                         <td>{{$reserve->email}} </td>
                                         <td>{{$reserve->phone}} </td>
+                                        <td>{{$reserve->car}} </td>
                                         <td>{{$reserve->status}} </td>
 
                                         <td>

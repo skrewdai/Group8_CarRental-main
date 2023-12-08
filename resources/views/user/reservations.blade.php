@@ -61,7 +61,18 @@
 
                 <div class="form-group col-md-6">
                     <label for="phone">Enter phone</label>
-                    <input type="text" class="form-control" id="phone" name="phone" required="">
+                    <input type="tel" class="form-control" id="phone" name="phone" required="">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="car">Select a Car</label>
+                    <select class="form-control" id="car" name="car" required="">
+                        <option value="Honda City">Honda City</option>
+                        <option value="Toyota Vios">Toyota Vios</option>
+                        <option value="Mazda 2">Mazda 2</option>
+                        <option value="Mitsubishi Mirage">Mitsubishi Mirage</option>
+                        <option value="Toyota Avanza">Toyota Avanza</option>
+                        <option value="Honda BRV">Honda BRV</option>
+                    </select>
                 </div>
             </div>
 
