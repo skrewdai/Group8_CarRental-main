@@ -51,12 +51,9 @@
                     <x-nav-link href="{{ route('user.dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Reservations') }}
                        </x-nav-link>
-                       <!-- <x-nav-link href="{{ route('user.approvedReservations') }}">
-                        Approved
-                    </x-nav-link> -->
-                    <!-- <x-nav-link href="{{ route('user.declinedReservations') }}">
-                        Declined
-                    </x-nav-link> -->
+                    <x-nav-link href="{{ route('user.Feedback') }}">
+                        Testimony
+                    </x-nav-link>
                     <x-nav-link href="{{ route('user.reservations') }}">
                         Book
                     </x-nav-link> 

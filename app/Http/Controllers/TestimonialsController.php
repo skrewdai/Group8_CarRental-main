@@ -24,7 +24,7 @@ class TestimonialsController extends Controller
         
         $testimony->save();
 
-        return redirect()->route('testimony')->with('success','');
+        return redirect()->route('user.dashboard')->with('success','');
 
     }
 }

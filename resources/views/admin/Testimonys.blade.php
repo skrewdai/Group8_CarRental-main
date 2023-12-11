@@ -1,35 +1,35 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Testimonys
+            Admin Dashboard
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="text-xl font-semibold mb-2">Testimonies</h2>
-                </div>
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Message</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title"><b>Feedback Management</b></h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Display Feedbacks -->
+                        <h5 class="card-title mb-4"><b>Feedbacks</b></h5>
+                        <ul class="list-group">
                             @foreach($testimonys as $testimony)
-                                <tr>
-                                    <th scope="row">{{$testimony->id}}</th>
-                                    <td>{{$testimony->name}}</td>
-                                    <td>{{$testimony->message}}</td>
-                                </tr>
-                            @endforeach 
-                        </tbody>
-                    </table>
+                                <li class="list-group-item">
+                                    <strong>{{ $testimony->name }}</strong>: {{ $testimony->message }}
+                                    <form class="float-end" method="post" action="{{ route('admin.deleteFeedback', $testimony->id) }}">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
+                                </li>
+                            @endforeach
+                        </ul>
+
+        
+                    </div>
                 </div>
             </div>
         </div>

@@ -75,6 +75,8 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     // Add other admin routes here
     Route::get('/admin',[AdminController::class, 'showdashboard'])->name('admin.dashboard');
     Route::get('/Testimonys',[TestimonialsController::class,'index'])->name('testimonys');
+    Route::delete('/admin/feedbacks/{id}', [AdminController::class, 'deleteFeedback'])->name('admin.deleteFeedback');
+    //
     Route::get('/Reservations',[ReservationController::class,'index'])->name('admin.Reserve');
     // routes/web.php
     Route::put('/reservations/{id}/approve', [ReservationController::class, 'approve'])->name('reservation.approve');
@@ -87,24 +89,28 @@ Route::group(['middleware' => ['auth']], function () {
     //
     Route::get('/Reserve',[ReservationController::class,'userreserve'])->name('user.dashboard');
     // Add other user routes here
-    Route::get('/Testimonials',[TestimonialsController::class,'index2'])->name('testimonials');
-    Route::post('/Testimonials',[TestimonialsController::class,'store'])->name('testimony');
+    Route::get('/user/feedback', [UserController::class, 'showFeedback'])->name('user.Feedback');
+    Route::post('/Testimonys',[TestimonialsController::class,'store'])->name('feedback');
+    
     // routes/web.php
     Route::get('/user/approved-reservations', [UserController::class, 'approvedReservations'])->name('user.approvedReservations');
     Route::get('/user/declined-reservations', [UserController::class, 'declinedReservations'])->name('user.declinedReservations');
+    //
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/user/reservations', [UserController::class, 'showReservations'])->name('user.reservations');
+        // Add other user routes here
+    });
 
+    Route::post('/Offers',[ReservationController::class,'store'])->name('reserve');
 // ...
-
+});
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/approved-reservations', [ReservationController::class, 'approvedReservations'])->name('user.approvedReservations');
 });
 
-});
-Route::post('/Offers',[ReservationController::class,'store'])->name('reserve');
 
 
-//
-Route::middleware(['auth'])->group(function () {
-    Route::get('/user/reservations', [UserController::class, 'showReservations'])->name('user.reservations');
-    // Add other user routes here
-});
+Route::get('/Testimonials',[TestimonialsController::class,'index2'])->name('testimonials');
+
+
+

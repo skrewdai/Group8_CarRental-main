@@ -98,32 +98,21 @@
 											<p><em>"I was hesitant about renting a car, but CtrlDrive put my worries to rest. The vehicle was well-maintained, and the whole experience was convenient. I appreciated their clear communication and responsiveness. They turned renting a car into a pleasant experience."</em></p>
 											<p><strong>- James Reid</strong></p>
 										</div>
-										<div class="col-6">
+										<div class="row">
+											@foreach($testimonys as $testimony)
+												<div class="col-6">
+													<p><em>{{$testimony->message}}</em></p>
+													<p><strong>- {{$testimony->name}}</strong></p>
+												</div>
+											@endforeach
+										</div>
+										{{-- <div class="col-6">
 											@foreach($testimonys as $testimony)
 											<p><em>{{$testimony->message}}</em></p>
 											<p><strong>{{"-".$testimony->name}}</strong></p>
 											@endforeach
-										</div>
+										</div> --}}
 										
-										<form method="Post" action="{{route('testimony')}}">
-											@csrf <!-- CSRF Protection -->
-											<div class="fields">
-												<div class="field half">
-													<label for="name">Name</label>
-													<input type="text" name="name" id="name" />
-												</div>
-												<div class="field">
-													<label for="message">Notes</label>
-													<textarea name="message" id="message" rows="6"></textarea>
-												</div>
-		
-												<div class="field half text-right">
-													<ul class="actions">
-														<li><button type="submit" value="Send Message" class="primary" >Submit</button></li>
-													</ul>
-												</div>
-											</div>
-										</form>
 									</div>
 									
 								</div>

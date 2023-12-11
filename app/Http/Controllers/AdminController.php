@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Testimonials;
 
 class AdminController extends Controller
 {
@@ -23,4 +24,11 @@ class AdminController extends Controller
         return view('/admin/dash', ['isAdmin' => $isAdmin]);
     }
   
+    public function deleteFeedback($id)
+    {
+        // Logic to delete feedback by ID
+        Testimonials::findOrFail($id)->delete();
+
+        return redirect()->back()->with('success', 'Feedback deleted successfully');
+    }
 }
