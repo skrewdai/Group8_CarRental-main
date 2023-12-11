@@ -22,10 +22,10 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('indexwelcome');
 Route::get('/welcome', function () {
     return view('welcome');
-});
+})->name('mainwelcome');
 Route::get('/Faqs', function () {
     return view('Faqs');
 });

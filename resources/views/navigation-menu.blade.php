@@ -5,14 +5,14 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                 {{--    <a href="{{ route('dashboard') }}">
+                 {{--    <a href="{{ route('welcome') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a> --}}
                     @auth
                 @if(auth()->user()->role === 'admin')
-                    <a href="{{ route('admin.dashboard') }}"><x-application-mark class="block h-9 w-auto" /></a>
+                    <a href="{{ route('indexwelcome') }}"><x-application-mark class="block h-9 w-auto" /></a>
                 @elseif(auth()->user()->role === 'user')
-                    <a href="{{ route('user.dashboard') }}"><x-application-mark class="block h-9 w-auto" /></a>
+                    <a href="{{ route('indexwelcome') }}"><x-application-mark class="block h-9 w-auto" /></a>
                 @endif
             @endauth
                 </div>
