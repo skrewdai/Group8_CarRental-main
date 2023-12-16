@@ -2,66 +2,97 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Testimonials;
+
 class UserController extends Controller
 {
     public function provedMethod()
     {
-        // Your logic for the 'user.proved' route
-
-        return view('user.proved'); // Adjust this based on your application's structure
+        try {
+            // Your logic for the 'user.proved' route
+            return view('user.proved'); // Adjust this based on your application's structure
+        } catch (\Exception $e) {
+            // Log the exception or handle it as needed
+            return redirect()->back()->with('error', 'Error processing proved method: ' . $e->getMessage());
+        }
     }
+
     public function index()
     {
-        // Your user dashboard logic here
-        
-        return view('user.dashboard');
+        try {
+            // Your user dashboard logic here
+            return view('user.dashboard');
+        } catch (\Exception $e) {
+            // Log the exception or handle it as needed
+            return redirect()->back()->with('error', 'Error loading user dashboard: ' . $e->getMessage());
+        }
     }
 
-    public function showFeedback()
+    public function showFeedback(Request $request)
     {
-        // Your logic to handle the feedback form submission
+        try {
+            // Your logic to handle the feedback form submission
 
-        // For example, you can access form data using $request
-       
-        // Perform actions with the form data, e.g., store in the database
+            // For example, you can access form data using $request
 
-        // Redirect back or to a success page
-        return view('user.Feedback');
+            // Perform actions with the form data, e.g., store in the database
+
+            // Redirect back or to a success page
+            return view('user.Feedback');
+        } catch (\Exception $e) {
+            // Log the exception or handle it as needed
+            return redirect()->back()->with('error', 'Error processing feedback form: ' . $e->getMessage());
+        }
     }
 
     public function showReservations()
     {
-        $reservations = Reservation::where('user_id', auth()->id())
-                                   ->where('status', 'approved')
-                                   ->get();
+        try {
+            $reservations = Reservation::where('user_id', auth()->id())
+                                       ->where('status', 'approved')
+                                       ->get();
 
-        return view('user.reservations', compact('reservations'));
+            return view('user.reservations', compact('reservations'));
+        } catch (\Exception $e) {
+            // Log the exception or handle it as needed
+            return redirect()->back()->with('error', 'Error loading user reservations: ' . $e->getMessage());
+        }
     }
-    
 
     public function approvedReservations()
-{
+    {
+        try {
+            $user = auth()->user();
+            $approvedReservations = $user->reservations()->where('status', 'approved')->get();
+            return view('user.approved_reservations', compact('approvedReservations'));
+        } catch (\Exception $e) {
+            // Log the exception or handle it as needed
+            return redirect()->back()->with('error', 'Error loading approved reservations: ' . $e->getMessage());
+        }
+    }
 
-    $user = auth()->user();
-    $approvedReservations = $user->reservations()->where('status', 'approved')->get();
-    return view('user.approved_reservations', compact('approvedReservations'));
-}
+    public function declinedReservations()
+    {
+        try {
+            $user = auth()->user();
+            $declinedReservations = $user->reservations()->where('status', 'declined')->get();
+            return view('user.declined_reservations', compact('declinedReservations'));
+        } catch (\Exception $e) {
+            // Log the exception or handle it as needed
+            return redirect()->back()->with('error', 'Error loading declined reservations: ' . $e->getMessage());
+        }
+    }
 
-public function declinedReservations()
-{
-    $user = auth()->user();
-    $declinedReservations = $user->reservations()->where('status', 'declined')->get();
-    return view('user.declined_reservations', compact('declinedReservations'));
-}
-
-//
-
-public function index2(){
-    $reservations = Reservation::all();
-    return view('user.Reserve',compact('reservations'));
-}
+    public function index2()
+    {
+        try {
+            $reservations = Reservation::all();
+            return view('user.Reserve', compact('reservations'));
+        } catch (\Exception $e) {
+            // Log the exception or handle it as needed
+            return redirect()->back()->with('error', 'Error loading user reservations: ' . $e->getMessage());
+        }
+    }
 }

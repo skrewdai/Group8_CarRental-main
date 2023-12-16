@@ -26,9 +26,18 @@ class AdminController extends Controller
   
     public function deleteFeedback($id)
     {
+    try {
         // Logic to delete feedback by ID
-        Testimonials::findOrFail($id)->delete();
+        $testimonial = Testimonials::findOrFail($id);
+        $testimonial->delete();
 
-        return redirect()->back()->with('success', 'Feedback deleted successfully');
+        $message = 'Feedback deleted successfully';
+        return redirect()->back()->with('success', $message);
+    } catch (\Exception $e) {
+        // Log the exception or handle it as needed
+        $errorMessage = 'Error deleting feedback: ' . $e->getMessage();
+        return redirect()->back()->with('error', $errorMessage);
     }
+    }
+
 }

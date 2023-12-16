@@ -35,3 +35,13 @@
         </div>
     </div>
 </x-app-layout>
+
+<script>
+    @if(session('success'))
+        alert("{{ session('success') }}");
+    @endif
+
+    @if(session('error'))
+        alert("{{ session('error') }}");
+    @endif
+</script>
