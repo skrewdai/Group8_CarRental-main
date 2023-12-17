@@ -5,9 +5,6 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                 {{--    <a href="{{ route('welcome') }}">
-                        <x-application-mark class="block h-9 w-auto" />
-                    </a> --}}
                     @auth
                 @if(auth()->user()->role === 'admin')
                     <a href="{{ route('indexwelcome') }}"> <img src="{{ asset('images/logis.png') }}" alt="Logo" style="width: 70px; height: auto;"/></a>

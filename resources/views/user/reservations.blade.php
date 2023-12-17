@@ -26,7 +26,7 @@
         <h5 class="card-title"><b>Reservation Form</b></h5>
     </div>
     <div class="card-body">
-        <form method="POST" action="{{ route('reserve') }}">
+        <form method="POST" action="{{ route('reserve') }}" id="reservationForm">
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -96,4 +96,27 @@
     @if(session('error'))
         alert("{{ session('error') }}");
     @endif
+
+        // Ensure pick-up and return dates are within the allowed time range
+        function validateDateTime() {
+        var pickDate = new Date(document.getElementById('pickdate').value);
+        var returnDate = new Date(document.getElementById('retdate').value);
+
+        var pickTime = pickDate.getHours();
+        var returnTime = returnDate.getHours();
+
+        if (pickTime < 8 || pickTime >= 22 || returnTime < 8 || returnTime >= 22) {
+            alert('Please select pick-up and return times between 8 am and 10 pm.');
+            return false;
+        }
+
+        return true;
+    }
+
+    // Add an event listener to the form to trigger the validation function
+    document.getElementById('reservationForm').addEventListener('submit', function (event) {
+        if (!validateDateTime()) {
+            event.preventDefault(); // Prevent form submission if validation fails
+        }
+    });
 </script>
