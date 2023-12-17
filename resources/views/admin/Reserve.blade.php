@@ -43,7 +43,7 @@
                                         <td>{{$reserve->car}} </td>
                                         <td>{{$reserve->status}} </td>
 
-                                        <td>
+{{--                                         <td>
                                             <form method="post" action="{{ route('reservation.approve', $reserve->id) }}" style="display:inline;">
                                                 @csrf
                                                 @method('put')
@@ -58,6 +58,24 @@
                                                     Decline
                                                 </button>
                                             </form>
+                                        </td> --}}
+                                        <td>
+                                            @if ($reserve->status != 'approved' && $reserve->status != 'declined')
+                                                <form method="post" action="{{ route('reservation.approve', $reserve->id) }}" style="display:inline;">
+                                                    @csrf
+                                                    @method('put')
+                                                    <button type="submit" class="btn btn-outline-success">
+                                                        Approve
+                                                    </button>
+                                                </form>
+                                                <form method="post" action="{{ route('reservation.decline', $reserve->id) }}" style="display:inline;">
+                                                    @csrf
+                                                    @method('put')
+                                                    <button type="submit" class="btn btn-outline-danger">
+                                                        Decline
+                                                    </button>
+                                                </form>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach
