@@ -10,9 +10,9 @@
                     </a> --}}
                     @auth
                 @if(auth()->user()->role === 'admin')
-                    <a href="{{ route('indexwelcome') }}"><x-application-mark class="block h-9 w-auto" /></a>
+                    <a href="{{ route('indexwelcome') }}"> <img src="{{ asset('images/logis.png') }}" alt="Logo" style="width: 70px; height: auto;"/></a>
                 @elseif(auth()->user()->role === 'user')
-                    <a href="{{ route('indexwelcome') }}"><x-application-mark class="block h-9 w-auto" /></a>
+                    <a href="{{ route('indexwelcome') }}"><img src="{{ asset('images/logis.png') }}" alt="Logo" style="width: 70px; height: auto;"/></a>
                 @endif
             @endauth
                 </div>
