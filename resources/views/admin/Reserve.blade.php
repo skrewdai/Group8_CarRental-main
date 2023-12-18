@@ -1,3 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <style>
+        /* Add your custom table styles here */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid white;
+            border-radius: 4px;
+        }
+
+        th {
+            background-color: #2a5699;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -5,7 +44,7 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12" style="background-color: #2a2f4a";>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="mb-8">
                 <div class="card">
@@ -43,22 +82,6 @@
                                         <td>{{$reserve->car}} </td>
                                         <td>{{$reserve->status}} </td>
 
-{{--                                         <td>
-                                            <form method="post" action="{{ route('reservation.approve', $reserve->id) }}" style="display:inline;">
-                                                @csrf
-                                                @method('put')
-                                                <button type="submit" class="btn btn-outline-success">
-                                                    Approve
-                                                </button>
-                                            </form>
-                                            <form method="post" action="{{ route('reservation.decline', $reserve->id) }}" style="display:inline;">
-                                                @csrf
-                                                @method('put')
-                                                <button type="submit" class="btn btn-outline-danger">
-                                                    Decline
-                                                </button>
-                                            </form>
-                                        </td> --}}
                                         <td>
                                             @if ($reserve->status != 'approved' && $reserve->status != 'declined')
                                                 <form method="post" action="{{ route('reservation.approve', $reserve->id) }}" style="display:inline;">
@@ -117,7 +140,12 @@
         </div>
     </div>
 </x-app-layout>
-
+<div class="py-12" style="background-color: #2a2f4a";>
+</div>
+<div class="py-12" style="background-color: #2a2f4a";>
+</div>
+<div class="py-12" style="background-color: #2a2f4a";>
+</div>
 <script>
     @if(session('success'))
         alert("{{ session('success') }}");
@@ -127,3 +155,5 @@
         alert("{{ session('error') }}");
     @endif
 </script>
+</body>
+</html>

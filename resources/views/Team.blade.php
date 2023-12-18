@@ -61,55 +61,43 @@
 									
 									<div class="row">
 										<div class="col-md-3 col-sm-6 co-xs-12 text-center">
-											<img src="images/author-image-1-646x680.jpg" class="img-responsive" alt="">	
+											<img src="images/andre.jpg" class="img-responsive" alt="">	
 
-											<h3>Johnny William</h3>
+											<h3>Andrew Calupaz</h3>
 
-											<h4><em>CEO</em></h4>
-
-											<ul class="icons">
-												<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-											</ul>
+											<h4><em>Backend Developer</em></h4>
 										</div>
 
 										<div class="col-md-3 col-sm-6 co-xs-12 text-center">
-											<img src="images/author-image-2-646x680.jpg" class="img-responsive" alt="">	
+											<img src="images/jans.png" class="img-responsive" alt="">	
 
-											<h3>Karry Pitcher</h3>
+											<h3>Lester Castro</h3>
 
-											<h4><em>CEO</em></h4>
-
-											<ul class="icons">
-												<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-											</ul>
+											<h4><em>Frontend Developer</em></h4>
 										</div>
 
 										<div class="col-md-3 col-sm-6 co-xs-12 text-center">
-											<img src="images/author-image-3-646x680.jpg" class="img-responsive" alt="">	
+											<img src="images/lombs.jpg" class="img-responsive" alt="">	
 
-											<h3>Mary Cool</h3>
+											<h3>Brent Lombos</h3>
 
-											<h4><em>CEO</em></h4>
-
-											<ul class="icons">
-												<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-											</ul>
+											<h4><em>Frontend Developer</em></h4>
 										</div>
 
 										<div class="col-md-3 col-sm-6 co-xs-12 text-center">
-											<img src="images/author-image-4-646x680.jpg" class="img-responsive" alt="">	
+											<img src="images/rain.jpg" class="img-responsive" alt="">	
 
-											<h3>Michael Soft</h3>
+											<h3>Rain Maglaqui</h3>
 
-											<h4><em>CEO</em></h4>
+											<h4><em>Frontend Developer</em></h4>
+										</div>
 
-											<ul class="icons">
-												<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-											</ul>
+										<div class="col-md-3 col-sm-6 co-xs-12 text-center">
+											<img src="images/jy.jpg" class="img-responsive" alt="">	
+
+											<h3>Jyrill Marcelo</h3>
+
+											<h4><em>Backend Developer</em></h4>
 										</div>
 
 									</div>
@@ -121,15 +109,8 @@
 				<!-- Footer -->
 				<footer id="footer">
 					<div class="inner">
-						<ul class="icons">
-							<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						</ul>
 						<ul class="copyright">
 							<li>Copyright  © 2023 CtrlDrive Auto Escapes</li>
-							<li> <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></li>
 						</ul>
 					</div>
 				</footer>

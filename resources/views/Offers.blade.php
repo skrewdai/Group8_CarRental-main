@@ -61,111 +61,99 @@
 								</section>
 
 				<!-- Main -->
-					<div id="main" class="alt">
-
-							<section class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/vios.png" alt="" />
-									</span>
-									<header class="major">
-										<h3>Toyota Vios 2019 Stock Red</h3>
-
-										<p>from : <strong>Php 5,000.00</strong> per weekend</p>
-
-										<p>Automatic transmition.</p><p> Toyota Vios is still the best-selling car in the Philippines in 2022, by far. </p>
-
-										<div class="major-actions">
-											<a href="#" data-toggle="modal" data-target="#exampleModal" class="button small next">Book Now</a>
-										</div>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/hcity.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3> Honda City 2019 Cherry Red</h3>
-
-										<p>from : <strong>Php 6,000.00</strong> per weekend</p>
-
-										<p>Automatic </p><p>The 1.5 E CVT is the most affordable variant with an automatic. </p>
-
-										<div class="major-actions">
-											<a href="#" data-toggle="modal" data-target="#exampleModal" class="button small next">Book Now</a>
-										</div>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/haccent.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3>Hyundai Accent 2016 L Blue</h3>
-
-										<p>from : <strong>Php 6,000.00</strong> per weekend</p>
-
-										<p>Automatic, Diesel, 43 L
-										</p> <p>134 hp, not flashy but gets the job done</p>
-
-										<div class="major-actions">
-											<a href="#" data-toggle="modal" data-target="#exampleModal" class="button small next">Book Now</a>
-										</div>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/wigo.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3>Red Orange Toyota Wigo '19</h3>
-
-										<p>from : <strong>$ 120.00</strong> per weekend</p>
-
-										<p>Automatic </p> <p> Everyday use</p>
-
-										<div class="major-actions">
-											<a href="#" data-toggle="modal" data-target="#exampleModal" class="button small next">Book Now</a>
-										</div>
-									</header>
-								</article>
-
-								<article>
-									<span class="image">
-										<img src="images/fordranger.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3>Black Ford Ranger 2024</h3>
-
-										<p>from : <strong>Php 15,000.00</strong> per weekend</p>
-
-										<p>Built to impress and to last</p>
-
-										<div class="major-actions">
-											<a href="#" data-toggle="modal" data-target="#exampleModal" class="button small next">Book Now</a>
-										</div>
-									</header>
-								</article>
-
-								<article>
-									<span class="image">
-										<img src="images/challenger.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3>Grey 2024 Dodge Challenger</h3>
-
-										<p>from : <strong>Php 120,000.00</strong> per weekend</p>
-
-										<p></p>
-
-										<div class="major-actions">
-											<a href="#" data-toggle="modal" data-target="#exampleModal" class="button small next">Book Now</a>
-										</div>
-									</header>
-								</article>
-							</section>
-
-					</div>
+				<div id="main" class="alt">
+					<section class="tiles">
+						<article>
+							<span class="image">
+								<img src="images/hcity.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h3>Honda City 2019 Cherry Red</h3>
+				
+								<p>Explore the city in style with our Honda City 2019 Cherry Red. Enjoy a smooth ride and modern features, starting from <strong>Php 3,000.00</strong> per day.</p>
+				
+								<div class="major-actions">
+									<a href="{{ route('login') }}" class="button small next">Book Now</a>
+								</div>
+							</header>
+						</article>
+						
+						<article>
+							<span class="image">
+								<img src="images/vios.png" alt="" />
+							</span>
+							<header class="major">
+								<h3>Toyota Vios 2019 Stock Red</h3>
+				
+								<p>Experience the reliability of the Toyota Vios 2019 Stock Red. Affordable and efficient, starting from <strong>Php 2,500.00</strong> per day.</p>
+				
+								<div class="major-actions">
+									<a href="{{ route('login') }}" class="button small next">Book Now</a>
+								</div>
+							</header>
+						</article>
+				
+						<article>
+							<span class="image">
+								<img src="images/mazda2.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h3>Mazda 2 2019</h3>
+				
+								<p>Drive in style with the Mazda 2 2019. Enjoy a comfortable ride with modern features, starting from <strong>Php 3,000.00</strong> per day.</p>
+				
+								<div class="major-actions">
+									<a href="{{ route('login') }}" class="button small next">Book Now</a>
+								</div>
+							</header>
+						</article>
+				
+						<article>
+							<span class="image">
+								<img src="images/mirage.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h3>Mirage Hatchback 2022</h3>
+				
+								<p>Experience the convenience of the Mirage Hatchback 2022. Automatic and perfect for everyday use, starting from <strong>Php 2,500.00</strong> per day.</p>
+				
+								<div class="major-actions">
+									<a href="{{ route('login') }}" class="button small next">Book Now</a>
+								</div>
+							</header>
+						</article>
+				
+						<article>
+							<span class="image">
+								<img src="images/avanza.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h3>Toyota Avanza 2023</h3>
+				
+								<p>Enjoy the spaciousness of the Toyota Avanza 2023. Perfect for group travels, starting from <strong>Php 5,000.00</strong> per day.</p>
+				
+								<div class="major-actions">
+									<a href="{{ route('login') }}" class="button small next">Book Now</a>
+								</div>
+							</header>
+						</article>
+				
+						<article>
+							<span class="image">
+								<img src="images/brv.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h3>Honda Brv 2024</h3>
+				
+								<p>Experience the spacious and powerful Honda Brv 2024. Perfect for family trips and adventures, starting from <strong>Php 6,000.00</strong> per day.</p>
+				
+								<div class="major-actions">
+									<a href="{{ route('login') }}" class="button small next">Book Now</a>
+								</div>
+							</header>
+						</article>
+					</section>
+				</div>
 
 				<!-- Footer -->
 				<footer id="footer">
@@ -186,7 +174,7 @@
 			</div>
 
 			<!-- Modal -->
-		    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		   {{--  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		      <div class="modal-dialog modal-lg" role="document">
 		        <div class="modal-content">
 		          <div class="modal-header">
@@ -248,7 +236,7 @@
 		          </div>
 		        </div>
 		      </div>
-		    </div>
+		    </div> --}}
 
 		<!-- Scripts -->
 			<script src="{{asset('/js/jquery.min.js')}}"></script>

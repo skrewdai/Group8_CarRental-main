@@ -99,12 +99,12 @@
               <form class="login-form" method="POST" action="{{ route('login') }}">
                   @csrf
 
-                  <div class="form-group">
+                  <div class="input-box">
                       <x-label for="email" value="{{ __('Email') }}" />
                       <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                   </div>
 
-                  <div class="form-group">
+                  <div class="input-box">
                       <x-label for="password" value="{{ __('Password') }}" />
                       <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                   </div>
@@ -123,7 +123,7 @@
                           </a>
                       @endif
 
-                      <x-button class="login-btn">
+                      <x-button class="btn">
                           {{ __('Log in') }}
                       </x-button>
                   </div>

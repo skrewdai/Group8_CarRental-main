@@ -85,12 +85,12 @@
 									<section class="tiles">
 										<article>
 											<span class="image">
-												<img src="https://images.hindustantimes.com/auto/img/2020/11/24/600x338/Honda_City_hatchback_1606214438854_1606214445801.JPG" alt="" height="200" />
+												<img src="images/mirage.jpg" alt="" />
 											</span>
 											<header class="major">
 												<h3>Group A - Hatchback</h3>
 		
-												<p>from : <strong>3500 pesos</strong> per day</p>
+												<p>Ranging from : <strong>2,500.00 - 3,000.00 pesos</strong> per Day</p>
 		
 												<p>Group A cars are compact economy vehicles known for their exceptionally low fuel consumption. Opting for this car rental category ensures both fuel efficiency and convenient parking solutions.</p>
 		
@@ -101,12 +101,12 @@
 										</article>
 										<article>
 											<span class="image">
-												<img src="https://imgcdnblog.carmudi.com.ph/carmudi-ph/wp-content/uploads/2019/03/07114536/Toyota-Vios.jpg" alt="my pic" />
+												<img src="images/vios.png" alt="my pic" />
 											</span>
 											<header class="major">
-												<h3>Group B: Sedan M/T</h3>
+												<h3>Group B: Sedan M/T or A/T</h3>
 		
-												<p>from : <strong>4500 pesos</strong> per day</p>
+												<p>Ranging from : <strong>2,500.00 - 3,000.00 pesos</strong> per day</p>
 		
 												<p>Group B vehicles consist of sedans that are slightly larger than our Group A models. Selecting this car rental category offers excellent fuel efficiency along with ample seating for up to 5 individuals.</p>
 		
@@ -117,12 +117,12 @@
 										</article>
 										<article>
 											<span class="image">
-												<img src="images/offer-3-720x480.jpg" alt="" />
+												<img src="images/avanza.jpg" alt="" />
 											</span>
 											<header class="major">
 												<h3>Group C - AUV (7 seater) A/T</h3>
 		
-												<p>from : <strong>7000 pesos</strong> per day</p>
+												<p>Ranging from : <strong>5,000.00 - 6,000.00 pesos</strong> per day</p>
 		
 												<p>
 													Choose Group  vehicles for ultimate comfort and ample space. Perfect for a cozy drive with seating for 7 people.

@@ -65,6 +65,7 @@ body {
     font-size: 20px;
 }
 
+.wrapper
 .wrapper .show-hide {
     display:flex;
     padding-left: 10px;
@@ -87,7 +88,9 @@ body {
     cursor: pointer;
     font-size: 16px;
     color: #333;
-    font-weight: 600;;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .wrapper .register-link {

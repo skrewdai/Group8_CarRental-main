@@ -1,7 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        /* Add your custom table styles here */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid white;
+            border-radius: 4px;
+        }
+
+        th {
+            background-color: #2a5699;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .btn.btn-primary {
+        background-color: #2a5699;
+        color: #fff;
+        }
+
+
+        .btn.btn-secondary {
+        background-color: #bf0505;
+        color: #fff;
+        }
+    </style>
+</head>
+
+<body>
 <x-app-layout>
     <x-slot name="header">
           <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-              Approved Reservations
+              Reserve
           </h2>
     </x-slot>
   
@@ -20,6 +69,7 @@
     @endif
   @endsection
     <!-- ... header and other content ... -->
+    <div class="py-12" style="background-color: #2a2f4a";>
     <div class="modal-body">
     <div class="card">
     <div class="card-header">
@@ -41,12 +91,12 @@
 
                 <div class="form-group col-md-6">
                     <label for="pickdate">Pick-up date/time</label>
-                    <input type="datetime-local" class="form-control" id="pickdate" name="datetime" required="">
+                    <input type="datetime-local" class="form-control" id="pickdate" name="datetime" required="" step="1800">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="retdate">Return date/time</label>
-                    <input type="datetime-local" class="form-control" id="retdate" name="datetime1" required="">
+                    <input type="datetime-local" class="form-control" id="retdate" name="datetime1" required="" step="1800">
                 </div>
 
                 <div class="form-group col-md-12">
@@ -77,13 +127,14 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="resetForm()">Cancel</button>
                 <button type="submit" class="btn btn-primary">Book Now</button>
             </div>
         </form>
     </div>
 </div>
-
+<div class="py-12" style="background-color: #2a2f4a";>
+</div>
     </div>
     </div>
   </x-app-layout>
@@ -96,6 +147,10 @@
     @if(session('error'))
         alert("{{ session('error') }}");
     @endif
+        
+        function resetForm() {
+            document.getElementById('reservationForm').reset();
+        }
 
         // Ensure pick-up and return dates are within the allowed time range
         function validateDateTime() {
@@ -119,4 +174,8 @@
             event.preventDefault(); // Prevent form submission if validation fails
         }
     });
+
 </script>
+</body>
+
+</html>
